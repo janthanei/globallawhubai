@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Globus Suchplattform</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Hier fügen Sie die spezifischen Skripte und Stile Ihres Chatbots ein -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Globus Suchplattform</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Hilfe</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="chatbot">
+        <div class="container">
+            <h1>Chatbot für Land: <span id="countryName"></span></h1>
+            <div id="chatbot-container">
+                <!-- Hier wird der Chatbot eingebunden -->
+                <!-- Beispiel: <iframe src="URL_IHRES_CHATBOTS" width="100%" height="600"></iframe> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Über uns</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Hilfe</a></li>
+                    <li><a href="#">Datenschutzrichtlinien</a></li>
+                    <li><a href="#">Nutzungsbedingungen</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funktion zum Abrufen des Ländercodes aus der URL und Anzeigen des Ländernamens
+        function getCountryName(countryCode) {
+            const countryNames = {
+                'USA': 'Vereinigte Staaten',
+                'DEU': 'Deutschland',
+                // Weitere Ländercodes und Namen hinzufügen
+            };
+            return countryNames[countryCode] || countryCode;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const countryCode = urlParams.get('country');
+            document.getElementById('countryName').innerText = getCountryName(countryCode);
+        });
+    </script>
+</body>
+</html>
