@@ -1,0 +1,162 @@
+/* CSS-Feld */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #f8f8f8;
+    color: #333;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header .logo {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav {
+    display: inline-block;
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    text-align: center;
+    background: #f0f0f0;
+    color: #333;
+    padding: 50px 0;
+    position: relative;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background: #555;
+}
+
+.globe {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.features {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features .feature {
+    display: inline-block;
+    width: 23%;
+    margin: 1%;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.testimonials {
+    padding: 50px 0;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.testimonials .testimonial {
+    display: inline-block;
+    width: 45%;
+    margin: 2%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.testimonials img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #f8f8f8;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+}
+
+footer .social-media img {
+    width: 20px;
+    height: 20px;
+}
