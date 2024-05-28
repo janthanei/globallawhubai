@@ -1,124 +1,19 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Globus Suchplattform</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://unpkg.com/globe.gl"></script>
+    <title>Bootstrap Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Globus Suchplattform</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Über uns</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                    <li><a href="#">Hilfe</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <div class="search-bar">
-                <input type="text" placeholder="Suchen Sie nach einem Ort, einer Adresse oder einem Land...">
-                <button>Suchen</button>
-            </div>
-            <div id="globeViz" class="globe"></div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <div class="feature">
-                <h2>Echtzeit-Wetterdaten</h2>
-                <p>Aktuelle Wetterinformationen weltweit.</p>
-            </div>
-            <div class="feature">
-                <h2>Detaillierte Kartenansichten</h2>
-                <p>Erkunden Sie detaillierte und interaktive Karten.</p>
-            </div>
-            <div class="feature">
-                <h2>Benutzerdefinierte Reisevorschläge</h2>
-                <p>Erhalten Sie personalisierte Reiseempfehlungen.</p>
-            </div>
-            <div class="feature">
-                <h2>Integration mit sozialen Medien</h2>
-                <p>Teilen Sie Ihre Lieblingsorte mit Freunden.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-            <div class="testimonial">
-                <img src="user1.jpg" alt="Benutzer 1">
-                <p>"Die beste Plattform für geografische Informationen!"</p>
-                <h3>- Benutzer 1</h3>
-            </div>
-            <div class="testimonial">
-                <img src="user2.jpg" alt="Benutzer 2">
-                <p>"Einfach zu bedienen und unglaublich hilfreich."</p>
-                <h3>- Benutzer 2</h3>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Über uns</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                    <li><a href="#">Hilfe</a></li>
-                    <li><a href="#">Datenschutzrichtlinien</a></li>
-                    <li><a href="#">Nutzungsbedingungen</a></li>
-                </ul>
-            </nav>
-            <div class="social-media">
-                <a href="#"><img src="facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Funktion zum Laden der GeoJSON-Daten und Initialisierung des Globus
-        async function initializeGlobe() {
-            const world = await fetch('https://raw.githubusercontent.com/owid/co2-data/master/regions/world.geo.json').then(res => res.json());
-
-            const globe = Globe()
-                .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
-                .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-                .polygonsData(world.features)
-                .polygonCapColor(() => 'rgba(200, 0, 0, 0.6)')
-                .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
-                .polygonStrokeColor(() => '#111')
-                .polygonLabel(({ properties: d }) => `
-                    <b>${d.ADMIN} (${d.ISO_A2})</b>
-                    <br />
-                    Population: ${d.POP_EST}
-                `)
-                .onPolygonClick(({ properties: d }) => {
-                    alert(`You clicked on ${d.ADMIN}`);
-                    window.location.href = `chatbot.html?country=${d.ISO_A2}`; // Weiterleitung zur Chatbot-Seite mit Ländercode
-                })
-                (document.getElementById('globeViz'));
-
-            globe
-                .width(document.getElementById('globeViz').clientWidth)
-                .height(document.getElementById('globeViz').clientHeight);
-        }
-
-        initializeGlobe();
-    </script>
+    <div class="container">
+        <h1 class="text-center">Hello, Bootstrap!</h1>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
