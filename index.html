@@ -15,8 +15,10 @@
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown button
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="bundeslaenderDropdown">
-                <!-- Dropdown items will be populated here -->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
             </div>
         </div>
     </div>
@@ -24,21 +26,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Fetch the JSON file and populate the dropdown
-        fetch('de_bundeslaender.json')
-            .then(response => response.json())
-            .then(data => {
-                const dropdownMenu = document.getElementById('bundeslaenderDropdown');
-                data.forEach(bundesland => {
-                    const item = document.createElement('a');
-                    item.className = 'dropdown-item';
-                    item.href = '#';
-                    item.textContent = bundesland;
-                    dropdownMenu.appendChild(item);
-                });
-            })
-            .catch(error => console.error('Error fetching the JSON file:', error));
-    </script>
 </body>
 </html>
